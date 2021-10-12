@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="css/calculator.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card text-center">
+        <div id="container">
+            <div class="card-body">
+                  <h1 class="card-title">Calculator</h1>
+                    <form id="Myform" name="calc">
+                        <div class="input-group mb-3">
+                            <input type="text" name="display" style="font-size: 20px;margin-left: 180px;margin-bottom: 30px; height: 40px;width: 425px; background-color: whitesmoke; border-color: red; border-radius: 10px; text-align: center;" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='1'">1</button>
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='2'">2</button>
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='3'">3</button>
+                            <button class="btn btn-info" type="button" style="font-size: 30px; background-color: lightseagreen" onclick="calc.display.value+='+'">+</button>
+                        </div><br/>
+
+                        <div class="btn-group" role="group" aria-label="Basic example" style="margin-top: 10px;">
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='4'">4</button>
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='5'">5</button>
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='6'">6</button>
+                            <button class="btn btn-warning" style="font-size: 30px;" type="button" onclick="calc.display.value+='-'">-</button>
+                        </div><br/>
+                        <div class="btn-group" role="group" aria-label="Basic example" style="margin-top: 10px;">
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='7'">7</button>
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='8'">8</button>
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='9'">9</button>
+                            <button class="btn btn-dark" style="font-size: 30px;" type="button" onclick="calc.display.value+='*'">x</button>
+                        </div><br/>
+                        <div class="btn-group" role="group" aria-label="Basic example" style="margin-top: 10px;">
+                            <button class="btn btn-primary" style="font-size: 30px;" type="button" onclick="calc.display.value+='0'">0</button>
+                            <button class="btn btn-danger" style="font-size: 30px;" type="button" onclick="calc.display.value=calc.display.value.slice(0, -1);">&#x2190</button>
+                            <button class="btn btn-secondary" type="button" style="font-size: 30px; background-color: limegreen; border-color: limegreen;" onclick="if(calc.display.value!= '') {calc.display.value= eval(calc.display.value)} else {calc.display.value=''}">=</button>
+                            <button class="btn btn-secondary" type="button" style="font-size: 30px;" onclick="calc.display.value+='/'">&#247</button>
+                        </div><br/>
+                        <button id="clear" class="btn btn-info" type="button" style="font-size: 30px; line-height: 50px;
+                        width: 100px; margin-left: 20px; margin-top: 30px; background-color: red; border-color: red; font-weight: bold;" onclick="calc.display.value=''">C</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="calculator.js"></script>
+</body>
+</html>
